@@ -374,4 +374,20 @@ section .foots div span:nth-child(1) { bottom: 2%; left: 0; right: 0; padding: 2
 section .foots div span:nth-child(2) { right: 5%; top: 17%; }
 section .foots div span:nth-child(3) { left: 5%; top: 17%; }
 section .foots div span:nth-child(4) { left: 0%; right: 0; top: 14%; }
+@media (max-width:720px) {
+ 
+    section .foots div {
+  
+    bottom: 24%;
+  
+}
+    section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(1) {
+    top: 10px;
+    transform: translateY(-145px) rotate(-40deg) translateX(-55px);
+}
 
+section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(2) {
+    top: 10px;
+    transform: translateY(-145px) rotate(40deg) translateX(55px);
+}
+}
