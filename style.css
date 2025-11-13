@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5d858;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 350px;
+    width: 100%;
+    background: #fff;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+section .logo {
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section form .btn {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+}
+
+section form .btn label {
+    font-weight: 500;
+    transition: .2s;
+    pointer-events: none;
+}
+
+section form .btn input:not(input[type=submit]) {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid #1111116e;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+section form .btn:last-child {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section form .btn input[type=submit] {
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: #f5d858;
+    color: #111;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: .3s;
+}
+
+section form .btn input[type=submit]:hover {
+    box-shadow: 0 0 0 2px #f5d858, 0 0 0 8px #f5d85891;
+    cursor: pointer;
+    background-color: #f5d858bb;
+}
+
+section form .btn input:focus~label {
+    transform: translateX(10px);
+}
+
+/* ====== PANDA HEAD ====== */
+section .head-banda {
+    position: absolute;
+    top: 18%;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50% 45% 45%;
+    box-shadow: 0 0 4px #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* EARS */
+section .head-banda .ears {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .head-banda .ears div {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background-color: #3b3535;
+    border-radius: 45% 45% 0 0;
+    z-index: -1;
+    top: -5%;
+    transition: .3s;
+}
+
+section .head-banda .ears div:nth-child(1) {
+    transform: rotate(40deg);
+    right: -15%;
+}
+
+section .head-banda .ears div:nth-child(2) {
+    transform: rotate(-40deg);
+    left: -15%;
+}
+
+/* FACE */
+section .head-banda .panda-face {
+    width: 80%;
+    height: 60%;
+    position: relative;
+}
+
+/* EYES */
+section .head-banda .panda-face .ayes {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+section .head-banda .panda-face .ayes div {
+    transform: translateY(20px);
+    background-color: #3b3535;
+    width: 40px;
+    height: 50px;
+    border-radius: 30px;
+    position: relative;
+    transition: .3s;
+}
+
+section .head-banda .panda-face .ayes div:nth-child(1) {
+    transform: rotate(-30deg);
+}
+
+section .head-banda .panda-face .ayes div:nth-child(2) {
+    transform: rotate(30deg);
+}
+
+section .head-banda .panda-face .ayes div div {
+    position: absolute;
+    bottom: 0;
+    top: 35%;
+    right: 0;
+    left: 0;
+    background: #ffffffd8;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: auto;
+    transition: .3s;
+}
+
+section .head-banda .panda-face .ayes div div:nth-child(1) {
+    transform: rotate(180deg);
+}
+
+/* EYES FOCUS ANIMATION */
+section:has(form .btn:nth-child(1) input:focus) .head-banda .panda-face .ayes div div {
+    width: 20px;
+    height: 20px;
+    top: 10%;
+    border-bottom: 4px solid #fff;
+    background-color: transparent;
+}
+
+section:has(form .btn:nth-child(1) input:focus) .head-banda .panda-face .ayes div {
+    width: 40px;
+    height: 40px;
+}
+
+/* CHEEKS */
+section .head-banda .panda-face .cheeks {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+section .head-banda .panda-face .cheeks div {
+    background-color: rgba(255, 0, 98, 0.699);
+    width: 15px;
+    height: 20px;
+    border-radius: 70%;
+}
+
+section .head-banda .panda-face .cheeks div:nth-child(1) {
+    transform: rotate(-50deg);
+}
+
+section .head-banda .panda-face .cheeks div:nth-child(2) {
+    transform: rotate(50deg);
+}
+
+/* NOSE */
+section .head-banda .panda-face .nose {
+    transform: translateY(-10px);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section .head-banda .panda-face .nose div:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    background-color: #111;
+    border-radius: 50px 0 50% 0;
+    transform: rotate(43deg) translateY(0);
+}
+
+
+section .head-banda .panda-face .nose div:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translateY(10px) translateX(-35px);
+}
+
+section .head-banda .panda-face .nose div:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border-bottom: 3px solid #111;
+    border-radius: 50%;
+    transition: .4s ease;
+    transform: translateX(15px) translateY(-15px);
+}
+
+section:has(form .btn:nth-child(1) input:focus) .head-banda .panda-face .nose div:nth-child(3)::before {
+    width: 40px;
+    height: 22px;
+    border-bottom: 5px solid #111;
+}
+
+section:has(form .btn:nth-child(2) input:focus) .head-banda .panda-face .nose div:nth-child(3)::before {
+    width: 40px;
+    height: 20px;
+    border-radius: 0%;
+    border-bottom: 5px #111 solid;
+}
+
+/* HANDS */
+section .hands {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section .hands div {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #111;
+    width: 40px;
+    height: 80px;
+    top: 0%;
+    transform: translateY(-50px);
+    border-radius: 25%;
+    transition: .5s;
+    z-index: 333;
+}
+
+section .hands div:nth-child(1) {
+    left: 75%;
+}
+
+section .hands div:nth-child(2) {
+    right: 75%;
+}
+
+/* HANDS FOCUS ANIMATION */
+section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(1) {
+    top: 10px;
+    transform: translateY(-160px) rotate(-40deg) translateX(-55px);
+}
+
+section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(2) {
+    top: 10px;
+    transform: translateY(-160px) rotate(40deg) translateX(55px);
+}
+
+section:has(form .btn:nth-child(1) input:focus) .hands div:nth-child(1) {
+    top: 10px;
+    transform: translateY(-160px) rotate(40deg) translateX(55px);
+}
+
+section:has(form .btn:nth-child(1) input:focus) .hands div:nth-child(2) {
+    top: 10px;
+    transform: translateY(-55px);
+}
+
+/* EARS ANIMATION */
+section:has(form .btn:nth-child(2) input:focus) .head-banda .ears div {
+    animation: shake-ear 0.5s infinite alternate;
+}
+
+@keyframes shake-ear {
+    0% { width: 60px; height: 70px; }
+    50% { width: 65px; height: 75px; }
+    100% { width: 60px; height: 70px; }
+}
+
+/* FOOTS */
+section .foots div {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #111;
+    width: 60px;
+    height: 75px;
+    bottom: 27%;
+    border-radius: 25%;
+    transition: .5s;
+    z-index: 333;
+}
+
+section .foots div:nth-child(1) { left: 55%; }
+section .foots div:nth-child(2) { right: 55%; }
+
+section .foots div span {
+    margin: auto;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #423d3d;
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+/* FOOTS SPANS POSITION */
+section .foots div span:nth-child(1) { bottom: 2%; left: 0; right: 0; padding: 20px; }
+section .foots div span:nth-child(2) { right: 5%; top: 17%; }
+section .foots div span:nth-child(3) { left: 5%; top: 17%; }
+section .foots div span:nth-child(4) { left: 0%; right: 0; top: 14%; }
+
