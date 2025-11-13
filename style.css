@@ -378,16 +378,16 @@ section .foots div span:nth-child(4) { left: 0%; right: 0; top: 14%; }
  
     section .foots div {
   
-    bottom: 24%;
+    bottom: 22%;
   
 }
     section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(1) {
     top: 10px;
-    transform: translateY(-145px) rotate(-40deg) translateX(-55px);
+    transform: translateY(-140px) rotate(-40deg) translateX(-55px);
 }
 
 section:has(form .btn:nth-child(2) input:focus) .hands div:nth-child(2) {
     top: 10px;
-    transform: translateY(-145px) rotate(40deg) translateX(55px);
+    transform: translateY(-140px) rotate(40deg) translateX(55px);
 }
 }
